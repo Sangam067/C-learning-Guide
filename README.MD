@@ -73,13 +73,13 @@ int main(void) {
 ### Line-by-Line Breakdown
 
 | Component | Purpose |
-| --- | --- |
-| `#include <stdio.h>` | **Preprocessor directive:** Includes the Standard Input/Output header (`stdio.h`), giving the program access to functions such as `printf()` and `scanf()`. |
-| `int main(void)` | **Main function:** The entry point of every C program. `int` indicates an integer return value, and `void` means the function takes no parameters. |
-| `{ ... }` | **Curly braces:** Enclose the block of code that defines the body of `main`. |
-| `printf("Hello, World!\n");` | **Output function:** Prints text to the console. `\n` is an escape sequence that adds a newline. |
-| `;` | **Statement terminator:** Ends an individual C statement. |
-| `return 0;` | **Exit status:** Ends `main` and returns `0` to the operating system to indicate successful execution. |
+
+| `#include <stdio.h>` | A **preprocessor directive** that includes the Standard Input/Output header file (`stdio.h`), giving your program access to functions like `printf()` and `scanf()`. |
+| `int main(void)` | The **main function**, which serves as the entry point of every C program. `int` indicates it returns an integer status code, and `void` means it takes no input parameters. |
+| `{ ... }` | **Curly braces** define the start and end of a block of code (such as the body of `main`). |
+| `printf("Hello, World!\n");` | A standard library function that prints text to the console. `\n` is an **escape sequence** representing a newline character. |
+| `;` | The **semicolon** terminates a statement. Every individual instruction in C must end with `;`. |
+| `return 0;` | Exits the `main` function and sends the status code `0` back to the operating system, signaling that the program finished successfully. |
 
 ---
 
@@ -164,3 +164,5 @@ gcc -Wall -Wextra -std=c17 hello.c -o hello
 * `-std=c17` — Tells the compiler to follow the modern C17 language standard.
 * `-o hello` — Sets the output executable name to `hello` (or `hello.exe` on Windows).
 * `./hello` — Executes the compiled program (`hello.exe` in Windows Command Prompt).
+
+Use this guide to learn C as a beginner. This contains almost everything you need to learn to start your journey in C.
