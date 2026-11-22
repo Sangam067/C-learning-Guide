@@ -107,5 +107,92 @@ Grade: A</code></pre>
 
 </section>
 
+
+<!--Topic 3: User Input and Arithmetic Operators-->
+<section>
+    <h2>Reading Input (<code>scanf</code>) &amp; Arithmetic Operators</h2>
+    <p>
+      To read input from the keyboard, C uses <code>scanf()</code>. You must place the <strong>address-of operator (<code>&amp;</code>)</strong> before the variable name so <code>scanf()</code> knows where in memory to store the user's input.
+    </p>
+    <p>
+      <strong>Watch out for Integer Division:</strong> Dividing two integers in C (such as <code>15 / 4</code>) discards the decimal part and gives <code>3</code>. To get a decimal result, convert at least one number to <code>(float)</code>.
+    </p>
+
+    <div class="box-label">C Source Code can be found in Code Folder(calculator.c)</div>
+    <div class="box-label"><p style="color:black">Qn) Write a C program to take two numbers and perform all sort of calculations like a calculator</p></div><br>
+
+    <pre class="code-box"><code>#include &lt;stdio.h&gt;
+        int main(void) {
+    int num1, num2;
+
+    printf("Enter two integers: ");
+    scanf("%d %d", &amp;num1, &amp;num2);
+
+    printf("Addition (+):       %d\n", num1 + num2);
+    printf("Subtraction (-):    %d\n", num1 - num2);
+    printf("Multiplication (*): %d\n", num1 * num2);
+    printf("Integer Div (/):    %d\n", num1 / num2);
+    printf("Remainder (%%):      %d\n", num1 % num2);
+    printf("Exact Div:          %.2f\n", (float)num1 / num2);
+
+    return 0;
+}</code></pre>
+
+<div class="box-label">Terminal Command &amp; Output</div>
+    <pre class="output-box"><code>$ gcc -Wall -Wextra calculator.c -o calculator
+$ ./calculator
+Enter two integers: 15 4
+Addition (+):       19
+Subtraction (-):    11
+Multiplication (*): 60
+Integer Div (/):    3
+Remainder (%):      3
+Exact Div:          3.75</code></pre>
+</section>
+
+<!--Topic 4: Relational and Logical Operators-->
+<section>
+    <h2>Comparision</h2>
+    <h2>Comparison &amp; Logical Operators</h2>
+    <p>
+      Comparison operators (<code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>) and logical operators (<code>&amp;&amp;</code> for AND, <code>||</code> for OR, <code>!</code> for NOT) evaluate conditions.
+      In C, <strong><code>1</code> means True</strong> and <strong><code>0</code> means False</strong>.
+    </p><br>
+
+    <div class="box-label">C Source Code can be found in Code Folder(operators.c)</div>
+  
+    <pre class="code-box"><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int marks = 82;
+    int attendance = 90;
+
+    // 1 = True, 0 = False
+    printf("Passed exam (marks &gt;= 50): %d\n", marks &gt;= 50);
+    printf("Full score (marks == 100): %d\n", marks == 100);
+    printf("Eligible for honors (marks &gt;= 80 &amp;&amp; attendance &gt;= 75): %d\n",
+           marks &gt;= 80 &amp;&amp; attendance &gt;= 75);
+
+    return 0;
+}</code></pre>
+  
+<div class="box-label">Terminal Output</div>
+    <pre class="output-box"><code>Passed exam (marks &gt;= 50): 1
+Full score (marks == 100): 0
+Eligible for honors (marks &gt;= 80 &amp;&amp; attendance &gt;= 75): 1</code></pre>
+  </section>
+
+<!--Practice Task-->
+  <section>
+    <h2>Practice Task for Students</h2>
+    <p>
+      Write a C program named <code>rectangle.c</code> that asks the user to enter the <strong>length</strong> and <strong>width</strong> of a rectangle as <code>float</code> values, then calculates and prints:
+    </p>
+    <ol>
+      <li>The <strong>Area</strong> (<code>length * width</code>) rounded to 2 decimal places.</li>
+      <li>The <strong>Perimeter</strong> (<code>2 * (length + width)</code>) rounded to 2 decimal places.</li>
+    </ol>
+  </section>
+  
 </body>
 </html>
