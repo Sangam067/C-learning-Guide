@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1: Basic Theory of C - Learn C From Scratch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="lesson1.html">Lesson 1</a>
+        <a href="variables.html">Lesson 2</a>
+    </nav>
+
+    <h1>1. Basic Theory of C Programming &amp; Creating Your First Program</h1>
+
+    <!--Topic 1: Theory-->
+ <section>
+    <h2>What is C?</h2>
+    <p>
+      C is a <strong>general-purpose, procedural programming language</strong> created by Dennis Ritchie in 1972.
+      It compiles directly into fast machine code and gives you direct control over computer memory.
+    </p>
+    <ul>
+      <li><strong>Compiled Language:</strong> A compiler (like GCC) translates your entire <code>.c</code> file into an executable before it runs.</li>
+      <li><strong>Case-Sensitive:</strong> <code>main</code> and <code>Main</code> are treated as different names.</li>
+      <li><strong>Statement Terminator:</strong> Almost every instruction in C must end with a semicolon (<code>;</code>).</li>
+    </ul>
+  </section>   
+
+  <section>
+    <h2>Your First C Program</h2>
+    <p>
+      Every C program begins execution inside the <code>main()</code> function. The <code>#include &lt;stdio.h&gt;</code> line loads the standard input/output library so you can print text using <code>printf()</code>.
+    </p><br>
+    
+    <div class="box-label"><p style="color:black">Qn 1) Write your own C program Code to display Hello World in Output.</p></div>
+    <div class="box-label">C Source Code can be found in Code Folder(first.c)</div>
+  </section>
+
+  <pre class="code-box"><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    printf("Hello, World!\n");
+    getch();
+}</code></pre>
+
+<div class="box-label">Terminal Command &amp; Output</div>
+    <pre class="output-box"><code>$ gcc -Wall -Wextra hello.c -o hello
+$ ./hello
+Hello, World!</code></pre>
+  </section>
+<br>
+  <!--Topic 3: Example with theorey + code + output-->
+  <section>
+    <h2>Using Comment and Multiple Lines</h2>
+    <p>
+      Comments start with <code>//</code> and are ignored by the compiler. Use <code>\n</code> inside quotes to move text to a new line.
+    </p>
+
+    <div class="box-label">C source Code (lines.c)</div>
+    <pre class="code-box"><code>#include &lt;stdio.h&gt;
+      int main(void) {
+    // Printing two separate lines
+    printf("Welcome to C Programming!\n");
+    printf("Line 2 output.\n");
+    return 0;
+}</code></pre>
+<div class="box-label">Terminal Output</div>
+    <pre class="output-box"><code>Welcome to C Programming!
+      Line 2 output.</code></pre>
+  </section>
+  </body>
+</html>

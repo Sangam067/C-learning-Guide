@@ -1,0 +1,111 @@
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lesson 2: Variables, Data Types and Operators</title>
+      <link rel="stylesheet" href="style.css">   
+    </head>
+    <body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="lesson1.html">Lesson 1</a>
+        <a href="variables.html">Lesson 2</a>
+    </nav>
+<h1>2. Variables, Data Types &amp; Operators</h1>
+
+
+<!--Topic 1: Variables-->
+<section>
+<h2>What is a Variable?</h2>
+<p>
+    A <strong>variable</strong> is a named container in computer memory (RAM) used to store data that can change while your program runs.
+      Before using a variable in C, you must <strong>declare</strong> its data type and name.
+</p>
+<ul>
+    <li><strong>Declaration:</strong> <code>int age;</code> (reserves memory for an integer named <code>age</code>).</li>
+      <li><strong>Initialization:</strong> <code>int age = 20;</code> (creates the variable and gives it an initial value).</li>
+      <li><strong>Naming Rules:</strong> Variable names can use letters, digits, and underscores (<code>_</code>), cannot start with a digit, and cannot have spaces or match C keywords like <code>int</code> or <code>return</code>.</li>    
+</ul>
+</section>
+
+
+<!--Topic 2: Data Types-->
+<section>
+    <h2>Core Data Types &amp; Format Specifiers</h2>
+    <P>
+      C is a <strong>statically typed</strong> language, meaning every variable must have a fixed data type so the compiler knows how much memory to reserve.
+      When printing variables with <code>printf()</code>, you use <strong>format specifiers</strong> (like <code>%d</code> or <code>%f</code>) as placeholders.
+    </p>
+
+  <table>
+    <thead>
+        <tr>
+            <th>Data Type</th>
+          <th>What It Stores</th>
+          <th>Typical Size</th>
+          <th>Format Specifier</th>
+          <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>int</td>
+            <td>Whole numbers</td>
+            <td>4 bytes</td>
+            <td>%d</td>
+            <td><code>int age = 20;</code></td>
+        </tr>
+        <tr>
+            <td>float</td>
+            <td>Decimal numbers</td>
+            <td>4 bytes</td>
+            <td>%f</td>
+            <td><code>float price = 19.99;</code></td>
+        </tr>
+        <tr>
+            <td>double</td>
+            <td>More precise decimal numbers</td>
+            <td>8 bytes</td>
+            <td>%lf</td>
+            <td><code>double salary = 50000.00;</code></td>
+        </tr>
+        <tr>
+            <td>char</td>
+            <td>Single characters</td>
+            <td>1 byte</ td>
+            <td>%c</ td>
+            <td><code>char grade = 'A';</code></ td>
+        </tr>
+    </tbody>
+  </table>  
+  <br>
+ <div class="box-label">C Source Code can be found in Code Folder(datatypes.c)</div>
+ <div class="box-label"><p style="color:black">Qn) Try to use all the data types and print them </p></div><br>
+<pre class="code-box"><code>#include &lt;stdio.h&gt;
+    int main(void) {
+    int age = 20;
+    float height = 5.9f;
+    double pi = 3.1415926535;
+    char grade = 'A';
+
+    printf("Age: %d\n", age);
+    printf("Height: %.1f feet\n", height);   // .1 prints 1 decimal place
+    printf("Pi: %.6lf\n", pi);              // .6 prints 6 decimal places
+    printf("Grade: %c\n", grade);
+
+    return 0;
+}</code></pre>
+
+<div class="box-label">Terminal Command &amp; Output</div>
+    <pre class="output-box"><code>$ gcc -Wall -Wextra datatypes.c -o datatypes
+$ ./datatypes
+Age: 20
+Height: 5.9 feet
+Pi: 3.141593
+Grade: A</code></pre>
+
+</section>
+
+</body>
+</html>
