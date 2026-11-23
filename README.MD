@@ -165,4 +165,4 @@ gcc -Wall -Wextra -std=c17 hello.c -o hello
 * `-o hello` — Sets the output executable name to `hello` (or `hello.exe` on Windows).
 * `./hello` — Executes the compiled program (`hello.exe` in Windows Command Prompt).
 
-Use this guide to learn C as a beginner. This contains almost everything you need to learn to start your journey in C.
+Use this guide to learn C as a beginner. This contains almost everything you need to learn to start your journey in C. 

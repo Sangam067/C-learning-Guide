@@ -144,7 +144,7 @@ Sum = 20</code></pre>
 
        <div class="solution-note">
         <strong>Need Help?</strong> All C solutions for these tasks are available in the repository's <code>code/</code> folder:
-        <a href="" target="_blank">View Solutions in Code Folder</a>
+        <a href="https://github.com/Sangam067/C-learning-Guide/tree/main/code" target="_blank">View Solutions in Code Folder</a>
       </div>
       </section>
       
@@ -185,15 +185,97 @@ Enter an integer: 17
     </section>
  <section>
     <h2>Programming Tasks (Conditional)</h2>
-    <p>><em>Conditional Practice Questions to be loaded here.</em></p>
+     <p>Solve the following decision-making problems using <code>if / else</code> or <code>switch</code> statements:</p>
+  <OL CLASS="task-list">
+     <li>
+      Write a program to check whether a given integer is <strong>positive, negative, or zero</strong>.
+    </li>
+     <li>
+          Write a program to find the <strong>largest among three numbers</strong> entered by the user.
+    </li>
+    <li>
+          Write a program to check whether a given year is a <strong>leap year</strong> or not.<br>
+          <span class="formula">Hint: Divisible by 400, OR divisible by 4 and not divisible by 100</span>
+        </li>
+        <li>
+          Write a program to check whether an entered alphabet character is a <strong>vowel or a consonant</strong>.
+        </li>
+        <li>
+          Write a simple calculator program using a <code>switch</code> statement that takes an operator (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>) and two numbers, then prints the result.
+        </li>
+
+  </OL>
 
     <div class="solution-note">
         <strong>Need help?</strong> All C solutions are available in the repository's <code>code/</code> folder:
-        <a href="" target="_blank">View Solutions in Code Folder</a>
+        <a href="https://github.com/Sangam067/C-learning-Guide/tree/main/code" target="_blank">View Solutions in Code Folder</a>
+      </div>
+ </section>  
+
+ 
+ </section>
+ </div> 
+ 
+  <!--Panel 3: Loops(hidden until clicked)-->
+<div id="loops" class="topic-panel" style="display: none;">
+    <section>
+        <h2>3. Loop Control Structure</h2>
+      <p>
+        <strong>Loops</strong> (<code>for</code>, <code>while</code>, and <code>do-while</code>) repeat a block of code automatically until a stopping condition is met.
+      </p>
+
+      <h3>Example: Print Numbers from 1 to 5</h3>
+      <div class="box-label">C Source Code (loop_example.c)</div>
+      <pre class="code-box"><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 1; i &lt;= 5; i++) {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    return 0;
+}</code></pre>
+
+ <div class="box-label">Terminal Command &amp; Output</div>
+      <pre class="output-box"><code>$ gcc -Wall -Wextra loop_example.c -o loop_example
+$ ./loop_example
+1 2 3 4 5</code></pre>
+    </section>
+
+<section>
+  <h2>Programming Tasks (Loops)</h2>
+  <p>Solve the following repetition problems using <code>for</code>, <code>while</code>, or <code>do-while</code> loops:</p>
+  <ol class="task-list">
+    <li>
+          Write a program to calculate the <strong>sum of the first N natural numbers</strong>.<br>
+          <span class="formula">Sum = 1 + 2 + 3 + ... + N</span>
+        </li>
+
+        <li>
+          Write a program to find the <strong>factorial</strong> of a given positive integer.<br>
+          <span class="formula">N! = 1 &times; 2 &times; 3 &times; ... &times; N</span>
+        </li>
+        <li>
+          Write a program to display the <strong>multiplication table</strong> of a given number from 1 to 10.
+        </li>
+        <li>
+          Write a program to <strong>reverse a given integer</strong> using a <code>while</code> loop (for example, input <code>1234</code> gives output <code>4321</code>).
+        </li>
+        <li>
+          Write a program to check whether a given positive integer is a <strong>prime number</strong> or not.
+        </li>
+  </ol>
+
+  <div class`="solution-note">
+        <strong>Need help?</strong> All C solutions are available in the repository's <code>code/</code> folder:
+        <a href="https://github.com/Sangam067/C-learning-Guide/tree/main/code" target="_blank">View Solutions in Code Folder</a>
       </div>
 
- </section>  
- </div> 
+
+</section>
+
+    </div>
  <script>
     function openTopic(topicId, clickedButton) {
       const panels = document.querySelectorAll('.topic-panel');
@@ -211,4 +293,4 @@ Enter an integer: 17
     }
  </script>
 </body>
-</html>      
+</html>       
