@@ -1,6 +1,6 @@
 This is a repository for the students who are new to the C programming language. Here they can learn C programming from scratch along with tasks and practical exercises.
 
-This is one of the best structured, hands-on repository for learning C programming from the ground up.
+This is one of the best structured, repository for learning C programming from the ground up.
 
 ## Course Outline
 
@@ -17,19 +17,19 @@ First for using C-programming in VScode you need to configure VScode for C and C
 YOu can watch this video if you are confused on how to do so: https://youtu.be/1PBD5qFWdq8 
 
 Step-02 
-You need some prior knowledge about some very important aspects of c programming. 
+You need to learn about the basic things of C-Programming 
 
 # 1. Basic Theory of C Programming & Hello World
 
 ## What is C?
 
-C is a **general-purpose, procedural programming language** developed by **Dennis Ritchie** at Bell Laboratories in **1972**. It was originally created to build the UNIX operating system and has remained a foundational language in computer science ever since.
+C is a **general-purpose, procedural programming language** developed by **Dennis Ritchie** at Bell Laboratories in **1972**. It was originally created to build the UNIX operating system and has remained a foundational language in computer science ever since he developed this program.
 
 ### Key Characteristics of C
-* **Procedural Language:** Programs are structured as a sequence of step-by-step instructions grouped into reusable blocks called **functions**.
-* **Middle-Level Language:** C combines the readability of high-level languages (such as `if` statements, loops, and functions) with low-level access to computer memory and hardware.
-* **Fast and Efficient:** Because C compiles directly into native machine code without heavy runtime overhead, programs written in C run very fast and use minimal memory.
-* **Portable:** Standard C code can be compiled and run on almost any operating system or hardware architecture with little or no modification.
+* **Procedural Language:**The programs are organized in the form of a series of step-wise instructions that are put together as **functions**.
+* **Middle-Level Language:** C is a language that provides features of high-level languages (like `if` constructs, loops, and functions) along with low-level capabilities related to computer hardware.
+* **Fast and Efficient:**  C programs are efficient as they execute very quickly due to compilation of source code into native machine code.
+* **Portable:** We can compile and run the code file of C in any computer or share the file via any medium.
 
 ### Where C is Used Today
 * **Operating Systems:** Windows, Linux, and macOS kernels.
@@ -41,29 +41,29 @@ C is a **general-purpose, procedural programming language** developed by **Denni
 
 ## How a C Program Runs (Compilation Process)
 
-Computers only understand binary machine instructions (`0`s and `1`s). Unlike interpreted languages (such as Python) that execute code line-by-line, **C is a compiled language**. A program called a **compiler** (such as `gcc` or `clang`) translates your entire source file into an executable program before you run it.
+Computers only understand binary machine instructions (`0`s and `1`s). Unlike  languages like Python that execute code line-by-line, **C is a compiled language**.In it there is a program called a **compiler** (such as `gcc` or `clang`) that translates our entire source file into an executable program before running it.
 
 ```text
   hello.c          Preprocessor         Compiler           Assembler           Linker          hello.exe / ./hello
 (Source Code)  --->  (Expands #)   --->  (Assembly)   --->  (Object .o)  --->  (Adds libs)  --->    (Executable)
 ```
 
-1. **Source Code (`.c`):** The human-readable C code you write in your editor.
-2. **Preprocessor:** Processes lines starting with `#` (such as `#include`). It inserts header file contents and strips out comments before compilation.
-3. **Compiler:** Checks your code for syntax errors and translates the preprocessed C code into assembly language.
-4. **Assembler:** Converts the assembly instructions into binary machine code stored in an **object file** (`.o` or `.obj`).
-5. **Linker:** Combines your object file with pre-compiled standard library code (such as the implementation of `printf`) to produce the final standalone executable file.
+1. **Source Code (`.c`):**  The human readable C source code that you have written in the editor.
+2. **Preprocessor:**  The lines that start with # (such as `#include`) are preprocessed. Preprocessor expands the header files and removes comments from the source code before compilation.
+3. **Compiler:**  It checks your code for any syntax error and then translates the preprocessed C source code into assembly language.
+4. **Assembler:**It also Converts the assembly instructions into binary machine code that is stored in an **object file** (`.o` or `.obj`).
+5. **Linker:** It combines your object file with the pre-compiled standard library functions (like `printf()`) to create a stand-alone executable file.
 
 ---
 
 ## Anatomy of a Basic C Program
 
-Every runnable C program follows a standard structure. Below is a minimal C program:
+Every runnable/executable C program follows a standard structure. Here is an example:
 
 ```c
 #include <stdio.h>
 
-// Program execution begins inside the main function
+// Program execution begins inside the main function int main()
 int main(void) {
     printf("Hello, World!\n");
     return 0;
@@ -85,44 +85,44 @@ int main(void) {
 
 ## Building Blocks of C (Tokens)
 
-The smallest individual units in a C program are called **tokens**. The compiler breaks your source code down into six categories of tokens:
+The smallest individual units in a C program are called **tokens**. The compiler breaks the source code into six categories of tokens. They are:
 
 ### 1. Keywords
-Reserved words that have a fixed meaning to the C compiler and cannot be used as variable or function names. All C keywords are strictly lowercase.
+Keywords that have a definite meaning to the C compiler and cannot be used as names for variables or functions. All C keywords are in lowercase only.
 * Examples: `int`, `float`, `char`, `if`, `else`, `for`, `while`, `return`, `void`, `const`, `struct`
 
 ### 2. Identifiers
-Names created by the programmer for variables, functions, arrays, and structures.
+Identifiers are the names created by the programmer for variables, functions, arrays, and structures.
 * **Rules for valid identifiers:**
-  1. Can only contain letters (`A–Z`, `a–z`), digits (`0–9`), and underscores (`_`).
-  2. Must begin with a letter or an underscore (cannot start with a digit).
-  3. Cannot contain spaces or special symbols (`@`, `$`, `%`, `-`).
-  4. Cannot be a reserved C keyword.
-  5. **Case-sensitive:** `total`, `Total`, and `TOTAL` are three different identifiers.
+  1. They Can only contain letters (`A–Z`, `a–z`), digits (`0–9`), and underscores (`_`) and no other objects.
+  2. They must begin with a letter or an underscore and cannot start with a digit.
+  3. They cannot contain spaces or special symbols as given (`@`, `$`, `%`, `-`).
+  4. They cannot be a reserved C keyword.
+  5. Identifiers are **Case-sensitive:** that means `total`, `Total`, and `TOTAL` are three different identifiers.
 
 ### 3. Constants (Literals)
-Fixed values written directly into the code that do not change during execution.
+They are the fixed values written directly into the code which do not change during the execution of program file.
 * **Integer constants:** `10`, `-42`, `0`
 * **Floating-point constants:** `3.14`, `-0.005`
 * **Character constants:** `'A'`, `'9'`, `'\n'` (enclosed in single quotes)
 * **String literals:** `"Hello, World!"` (enclosed in double quotes)
 
 ### 4. Operators
-Symbols that tell the compiler to perform specific mathematical, relational, or logical operations.
+Operators are the ymbols that tell the compiler to perform specific mathematical, relational, or logical operations.
 * **Arithmetic:** `+`, `-`, `*`, `/`, `%`
 * **Assignment:** `=`, `+=`, `-=`
 * **Comparison:** `==`, `!=`, `<`, `>`, `<=`, `>=`
 * **Logical:** `&&` (AND), `||` (OR), `!` (NOT)
 
 ### 5. Punctuators (Separators)
-Symbols used to structure and separate code elements: `;` (semicolon), `,` (comma), `{ }` (braces), `( )` (parentheses), `[ ]` (brackets).
+Punctuators are the symbols that are used to structure and separate the code elements as given: `;` (semicolon), `,` (comma), `{ }` (braces), `( )` (parentheses), `[ ]` (brackets).
 
 ---
 
 ## Comments and Whitespace
 
 ### Comments
-Comments are notes written for human readers. The compiler completely ignores them.
+Comments are the notes written for human readers to understand what is happening in the program. A compiler completely ignores the comments.
 
 ```c
 // This is a single-line comment
@@ -134,25 +134,25 @@ Comments are notes written for human readers. The compiler completely ignores th
 ```
 
 ### Whitespace & Indentation
-Spaces, tabs, and blank lines are ignored by the compiler (except inside string literals or when separating tokens). However, consistent indentation (typically 4 spaces per block) is essential for keeping code readable and easy to debug.
+The compiler does not take into account spaces, tabs, or blank lines except within string literals or as token separators. Nevertheless, indentation, normally consisting of four spaces per block, is required for readability purposes.
 
 ---
 
 ## How C Thinks About Memory
 
-When you declare a variable in C, the program reserves a specific block of bytes in **RAM (Random Access Memory)**. Every variable has three fundamental attributes:
+A variable declaration in C programming allocates a definite number of bytes in the **RAM** (Random Access Memory). There are three basic characteristics of every variable declared:
 
-1. **Name:** The identifier used to access it in code (e.g., `score`).
-2. **Value:** The actual data stored inside that memory block (e.g., `95`).
-3. **Memory Address:** The unique numeric location in RAM where that block lives.
+1. **Name:** It is the identifier which is used to access it in code (e.g., `score`).
+2. **Value:** It is the actual data stored inside that memory block (e.g., `95`).
+3. **Memory Address:** It is the unique numeric location in the RAM where that block is stored.
 
-Understanding that every variable occupies a real location in memory is the foundation for mastering data types, arrays, and pointers later in the course.
+Knowing that each variable resides at a particular place in memory is key to comprehending data types, arrays, and pointers in future classes.
 
 ---
 
 ## Compiling and Running in the Terminal
 
-Save your code in a file named `hello.c`, open your terminal in that folder, and run:
+Save your code in a file named `hello.c`, open your terminal in that folder, and run the following code:
 
 ```bash
 gcc -Wall -Wextra -std=c17 hello.c -o hello
@@ -160,9 +160,9 @@ gcc -Wall -Wextra -std=c17 hello.c -o hello
 ```
 
 * `gcc` — Invokes the GNU C Compiler.
-* `-Wall -Wextra` — Enables compiler warnings to help catch common beginner mistakes early.
+* `-Wall -Wextra` — Enables compiler warnings in helping to catch common beginner mistakes early.
 * `-std=c17` — Tells the compiler to follow the modern C17 language standard.
-* `-o hello` — Sets the output executable name to `hello` (or `hello.exe` on Windows).
-* `./hello` — Executes the compiled program (`hello.exe` in Windows Command Prompt).
+* `-o hello` — It Sets the output executable name to `hello` (or `hello.exe` on Windows).
+* `./hello` — Executes the compiled program (`hello.exe` in the Command Prompt).
 
-Use this guide to learn C as a beginner. This contains almost everything you need to learn to start your journey in C. 
+Use this guide to learn C as a beginner. This contains almost everything you need to learn to start your journey in C programming. 

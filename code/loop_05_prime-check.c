@@ -24,3 +24,5 @@ if(p){
 }
 return 0;
 }
+
+//The program starts by assuming `n` is prime (`is_prime = 1`), rules out numbers `1` or less, and loops from `2` to `n / 2` to check if any number divides `n` evenly. As soon as a single divisor is found, it sets `is_prime = 0` and uses `break` to immediately exit the loop without wasting time on remaining checks before printing the final result.
