@@ -1,0 +1,214 @@
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Control Structures</title>
+      <link rel="stylesheet" href="style.css">  
+ <style>
+    /* Clean styling for math formulas and solution callout box */
+    .formula {
+      display: inline-block;
+      background-color: #f6f8fa;
+      border: 1px solid #d0d7de;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+      margin-top: 6px;
+    }
+
+    .task-list li {
+      margin-bottom: 14px;
+    }
+
+    .solution-note {
+      background-color: #f0f6fc;
+      border: 1px solid #bdd8f8;
+      border-left: 4px solid #0969da;
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+
+    .solution-note a {
+      color: #0969da;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="lesson1.html">Lesson 1</a>
+        <a href="variables.html">Lesson 2</a>
+        <a href="constructs.html">Lesson 3</a>
+    </nav>
+
+   
+        <h1>3.Control Structures in C (Sequentials, Conditionals and Loops)</h1>
+    <p>
+    <strong>Control structures</strong> determine the order in which instructions are executed in a C program. By default, C runs code line-by-line from top to bottom (<strong>Sequential</strong>), but programs often need to make decisions based on conditions (<strong>Conditional</strong>) or repeat a block of code multiple times (<strong>Loops</strong>). Select a topic below to explore each one:
+  </p>
+ 
+
+  <div class="sub-nav">
+    <button class="tab-btn active" onclick="openTopic('sequential', this)">1. Sequential</button>
+    <button class="tab-btn" onclick="openTopic('conditional', this)">2. Conditional</button>
+    <button class="tab-btn" onclick="openTopic('loops', this)">3. Loops</button>
+  </div>
+
+<div id="sequential" class="topic-panel">
+    <section></section>
+  <h2>1. Sequential Control Structure</h2>
+      <p>
+        In a <strong>sequential</strong> structure, statements execute strictly one after another in the exact order they are written—without skipping any line or repeating anything. Every basic input-process-output program follows sequential flow.
+      </p>
+
+<h3>Example: Sum of Two Numbers</h3>
+      <div class="box-label">C Source Code (sequential_example.c)</div>
+      <pre class="code-box"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b, sum;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &amp;a, &amp;b);
+
+    sum = a + b;
+    printf("Sum = %d\n", sum);
+
+    return 0;
+}</code></pre>
+
+<div class="box-label">Terminal Command &amp; Output</div>
+
+<pre class="code-box"><code>$ gcc sequential_example.c -o sequential_example
+    $ ./sequential_example
+Enter two numbers: 12 8
+Sum = 20</code></pre>
+    </section>
+
+    <!-- Programming Tasks for Sequential -->
+    <section>
+        <h3>Programming Tasks</h3>
+        <p>Solve the following problems using sequential C programs (remember to include <code>&lt;math.h&gt;</code> when using <code>sqrt()</code> or <code>pow()</code>):</p>
+
+       <ol class="task-list">
+<li>
+          Write a program to calculate simple interest for a given <strong>P</strong>, <strong>T</strong>, <strong>R</strong>.<br>
+          <span class="formula">I = (P &times; T &times; R) / 100</span>
+        </li>
+
+        <li>
+          Write a program to find the average of three real numbers.
+        </li>
+
+        <li>
+          Write a program to find the area and circumference of a circle.<br>
+          <span class="formula">A = &pi;r<sup>2</sup> &nbsp;|&nbsp; C = 2&pi;r</span>
+        </li>
+
+        <li>
+            Write a program to find the area of a triangle given sides <strong>a</strong>, <strong>b</strong>, <strong>c</strong>.<br>
+          <span class="formula">Semi-perimeter (s) = (a + b + c) / 2</span><br>
+          <span class="formula">Area of triangle = &radic;(s(s - a)(s - b)(s - c))</span>
+        </li>
+
+        <li>
+        Write a program to convert Celsius to Fahrenheit and vice-versa.<br>
+          <span class="formula">Fahrenheit to Celsius: &deg;C = (5 / 9) &times; (&deg;F - 32)</span><br>
+          <span class="formula">Celsius to Fahrenheit: &deg;F = ((9 / 5) &times; &deg;C) + 32</span>
+        </li>
+
+        <li>
+          Write a program to find the real roots of a quadratic equation <strong>ax<sup>2</sup> + bx + c = 0</strong>.<br>
+          <span class="formula">x = (-b &plusmn; &radic;(b<sup>2</sup> - 4ac)) / (2a)</span>
+        </li>
+
+        <li>
+          Write a program to find the distance between two points <strong>(x<sub>1</sub>, y<sub>1</sub>)</strong> and <strong>(x<sub>2</sub>, y<sub>2</sub>)</strong>.<br>
+          <span class="formula">d = &radic;((x<sub>2</sub> - x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub> - y<sub>1</sub>)<sup>2</sup>)</span>
+        </li>
+
+        <li>
+          Write a program to find the volume of a cylinder.<br>
+          <span class="formula">V = &pi;r<sup>2</sup>h</span>
+        </li>
+
+        <li>
+          Write a program to find compound interest.<br>
+          <span class="formula">Compound Interest = P [ (1 + R / 100)<sup>t</sup> - 1 ]</span>
+        </li>
+
+       </ol>
+
+       <div class="solution-note">
+        <strong>Need Help?</strong> All C solutions for these tasks are available in the repository's <code>code/</code> folder:
+        <a href="" target="_blank">View Solutions in Code Folder</a>
+      </div>
+      </section>
+      
+    </div>
+
+      <!--Panel 2: Conditional Statements(hidden until clicked)-->
+<div id="conditional" class="topic-panel" style="display: none;">
+    <section>
+        <h2>2. Conditional Control Structure</h2>
+      <p>
+        <strong>Conditional</strong> statements (<code>if</code>, <code>else if</code>, <code>else</code>, and <code>switch</code>) let your program make decisions and run different blocks of code depending on whether a condition is True or False.
+      </p>
+<h3>Example: Check Even or Odd</h3>
+<div class="box-label">C Source Code (conditional_example.c)</div>
+<pre class="code-box"><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int num;
+
+    printf("Enter an integer: ");
+    scanf("%d", &amp;num);
+
+    if (num % 2 == 0) {
+        printf("%d is Even.\n", num);
+    } else {
+        printf("%d is Odd.\n", num);
+    }
+
+    return 0;
+}</code></pre>
+
+<div class="box-label">Terminal Command &amp; Output</div>
+      <pre class="output-box"><code>$ gcc -Wall -Wextra conditional_example.c -o conditional_example
+$ ./conditional_example
+Enter an integer: 17
+17 is Odd.</code></pre>
+
+    </section>
+ <section>
+    <h2>Programming Tasks (Conditional)</h2>
+    <p>><em>Conditional Practice Questions to be loaded here.</em></p>
+
+    <div class="solution-note">
+        <strong>Need help?</strong> All C solutions are available in the repository's <code>code/</code> folder:
+        <a href="" target="_blank">View Solutions in Code Folder</a>
+      </div>
+
+ </section>  
+ </div> 
+ <script>
+    function openTopic(topicId, clickedButton) {
+      const panels = document.querySelectorAll('.topic-panel');
+      panels.forEach(panel => {
+        panel.style.display = 'none';
+      });
+
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      document.getElementById(topicId).style.display = 'block';
+      clickedButton.classList.add('active');
+    }
+ </script>
+</body>
+</html>      
