@@ -73,12 +73,14 @@ int main(void) {
 ### Line-by-Line Breakdown
 
 | Component | Purpose |
+| :--- | :--- |
 | `#include <stdio.h>` | **Preprocessor Directive** to include the standard Input and Output header file (`stdio.h`) and use functions such as `printf()` and `scanf()`. |
 | `int main(void)` | **Main Function**: Entry point for every C program. `int` denotes that it will return integer status and `void` means no parameters will be taken. |
 | `{ ... }` | **Curly Braces** are used to indicate the starting and ending of a block of code like `main`. |
 | `printf("Hello, World!\n");` | This is the standard library function which prints the string on the screen. `\n` is called **Escape Sequence**. It is used to specify the line separator (New Line). |
 | `;` | **Semicolon** is used at the end of the command or statement. All statements in C should be ended by `;`. |
 | `return 0;` | Exit from the `main` function and provide the status `0` to the Operating System. |
+
 
 ---
 
